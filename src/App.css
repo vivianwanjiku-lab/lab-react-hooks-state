@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.dark-mode-toggle {
+  margin: 20px 0;
+}
+
+.dark-mode-toggle button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.dark-mode-toggle button:hover {
+  background-color: #0056b3;
+}
+
+.filters-section {
+  margin: 20px 0;
+}
+
+.filters-section select {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.products-list {
+  margin-top: 20px;
 }
 
 .card {
-  padding: 2em;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.light-mode .card {
+  background-color: #f9f9f9;
+  border-color: #ddd;
+}
+
+.dark-mode .card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+.card.outOfStock {
+  opacity: 0.6;
+}
+
+.card button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.card button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.card button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.shopping-cart {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+}
+
+.dark-mode .shopping-cart {
+  border-top-color: #444;
+}
+
+.shopping-cart p {
+  padding: 5px 0;
 }
